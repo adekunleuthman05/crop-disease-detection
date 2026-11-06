@@ -1,10 +1,3 @@
-<!--
-{% extends 'base.html' %}{% block content %}
-<section class="card hero"><p class="eyebrow">LEAF IMAGE ANALYSIS</p><h1>Upload a crop-leaf image</h1><p>Use a clear photo of one wheat, rice, or tomato leaf. Predictions become available after the trained model is connected.</p>
-<form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data"><label class="picker" for="image"><span>Choose image</span><input id="image" name="image" type="file" accept="image/png,image/jpeg,image/webp" required></label><p class="help">PNG, JPG, JPEG, or WEBP · maximum {{ max_size_mb }} MB</p><button type="submit">Analyze image</button></form></section>
-<section class="card small"><h2>Supported results</h2><p>Healthy or disease classifications for wheat, rice, and tomato. This tool supports decision-making; consult an agricultural expert before treatment decisions.</p></section>
-{% endblock %}
--->
 
 {% extends 'base.html' %}{% block content %}
 <section class="hero-grid"><div class="hero-copy"><div class="pill"><span></span> AI-assisted crop health screening</div><h1>See what your<br><em>leaf is telling you.</em></h1><p class="lead">Upload a clear leaf photograph to screen for common wheat, rice, and tomato diseases in seconds.</p><div class="crop-list"><span>Wheat</span><span>Rice</span><span>Tomato</span></div></div><div class="leaf-art" aria-hidden="true"><div class="sun"></div><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="leaf leaf-a"></div><div class="leaf leaf-b"></div><div class="leaf leaf-c"></div><div class="scan-card"><span class="scan-icon">⌁</span><div><b>Leaf scan ready</b><small>Upload an image to begin</small></div><span class="online">●</span></div></div></section>
