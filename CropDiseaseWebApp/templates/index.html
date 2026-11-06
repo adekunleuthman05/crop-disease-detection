@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block content %}
+<section class="card hero"><p class="eyebrow">LEAF IMAGE ANALYSIS</p><h1>Upload a crop-leaf image</h1><p>Use a clear photo of one wheat, rice, or tomato leaf. Predictions become available after the trained model is connected.</p>
+<form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data"><label class="picker" for="image"><span>Choose image</span><input id="image" name="image" type="file" accept="image/png,image/jpeg,image/webp" required></label><p class="help">PNG, JPG, JPEG, or WEBP · maximum {{ max_size_mb }} MB</p><button type="submit">Analyze image</button></form></section>
+<section class="card small"><h2>Supported results</h2><p>Healthy or disease classifications for wheat, rice, and tomato. This tool supports decision-making; consult an agricultural expert before treatment decisions.</p></section>
+{% endblock %}

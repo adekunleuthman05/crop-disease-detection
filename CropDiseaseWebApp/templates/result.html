@@ -1,0 +1,3 @@
+{% extends 'base.html' %}{% block title %}Prediction · Crop Disease Detection{% endblock %}{% block content %}
+<section class="card result"><img src="data:image/jpeg;base64,{{ preview_data }}" alt="Uploaded leaf image preview"><div><p class="eyebrow">PREDICTION RESULT</p><h1>{{ result.label }}</h1><dl><div><dt>Crop</dt><dd>{{ result.crop }}</dd></div><div><dt>Status</dt><dd>{{ result.condition }}</dd></div><div><dt>Confidence</dt><dd>{{ '%.2f'|format(result.confidence) }}%</dd></div></dl><a class="button" href="{{ url_for('index') }}">Analyze another image</a></div></section>
+{% if result.confidence == 0 %}<p class="notice warning">Mock mode is enabled: this is not a real prediction. Disable it before use.</p>{% endif %}{% endblock %}
