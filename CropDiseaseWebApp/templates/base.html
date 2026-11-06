@@ -1,6 +1,11 @@
+<!--
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{% block title %}Crop Disease Detection{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
 <body><main class="container"><a class="brand" href="{{ url_for('index') }}">🌿 Crop Disease Detection</a>
 {% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<div class="notice {{ category }}">{{ message }}</div>{% endfor %}{% endwith %}
 {% block content %}{% endblock %}</main><footer>Images are processed only for this request and are not kept by default.</footer></body></html>
+-->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0d4b34"><title>{% block title %}Crop Disease Detection{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><header class="site-header"><div class="nav shell"><a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">✦</span> LeafLens</a><span class="nav-note">Crop health analysis</span></div></header><main class="shell">{% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<div class="notice {{ category }}" role="alert">{{ message }}</div>{% endfor %}{% endwith %}{% block content %}{% endblock %}</main><footer><div class="shell footer-content"><span>© 2026 LeafLens · Crop Disease Detection</span><span>Images are processed for the request and not kept by default.</span></div></footer>{% block scripts %}{% endblock %}</body></html>
