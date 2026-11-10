@@ -12,12 +12,13 @@ class Config:
     MAX_CONTENT_LENGTH = 8 * 1024 * 1024  # 8 MB, enforced by Flask before saving.
     ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp"}
     UPLOAD_FOLDER = BASE_DIR / "instance" / "uploads"
-    # Leave blank until the training collaborator supplies a TensorFlow/Keras model.
-    MODEL_PATH = os.getenv("MODEL_PATH", "")
+    # This project ships with the verified training model. Override only when deploying another model.
+    MODEL_PATH = os.getenv("MODEL_PATH", str(BASE_DIR / "models" / "final_model.keras"))
     # Demonstration mode is intentionally OFF. Set true only for UI development, never deployment.
     ENABLE_MOCK_PREDICTION = os.getenv("ENABLE_MOCK_PREDICTION", "false").lower() == "true"
+    # Exact zero-based output order from final_model.keras and its training notebook.
     CLASS_LABELS = [
-        "Healthy_Wheat", "Wheat_Leaf_Rust", "Wheat_Septoria",
-        "Healthy_Rice", "Rice_Blast", "Brown_Spot", "Bacterial_Leaf_Blight",
-        "Healthy_Tomato", "Bacterial_Spot", "Early_Blight", "Late_Blight",
+        "Wheat_Rust", "Wheat_Leaf_Blight", "Wheat_Healthy",
+        "Rice_Blast", "Rice_Brown_Spot", "Rice_Healthy",
+        "Tomato_Early_Blight", "Tomato_Late_Blight", "Tomato_Bacterial_Spot", "Tomato_Healthy",
     ]

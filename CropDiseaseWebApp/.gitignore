@@ -1,5 +1,13 @@
-raw/
-dataset/
-reference/
 __pycache__/
-*.pyc
+*.py[cod]
+.venv/
+venv/
+.env
+instance/uploads/
+instance/test-uploads/
+*.keras
+!models/
+!models/final_model.keras
+*.h5
+saved_model/
+CropDiseaseWebApp.zip
