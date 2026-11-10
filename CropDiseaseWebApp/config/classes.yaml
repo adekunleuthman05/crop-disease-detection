@@ -1,0 +1,14 @@
+seed: 20260906
+splits: {train: 0.70, validation: 0.15, test: 0.15}
+classes:
+  Healthy_Wheat: {source: wheat_leaf_dataset, source_class: Healthy Wheat Leaf}
+  Wheat_Leaf_Rust: {source: wheat_leaf_dataset, source_class: Stripe Rust}
+  Wheat_Septoria: {source: wheat_leaf_dataset, source_class: Septoria Disease}
+  Healthy_Rice: {source: rice_bacterial_fungal, source_class: Healthy Rice Leaf}
+  Rice_Blast: {source: rice_bacterial_fungal, source_class: Leaf Blast}
+  Brown_Spot: {source: rice_bacterial_fungal, source_class: Brown Spot}
+  Bacterial_Leaf_Blight: {source: rice_bacterial_fungal, source_class: Bacterial Leaf Blight}
+  Healthy_Tomato: {source: plantvillage, source_class: Tomato___healthy}
+  Early_Blight: {source: plantvillage, source_class: Tomato___Early_blight}
+  Late_Blight: {source: plantvillage, source_class: Tomato___Late_blight}
+  Bacterial_Spot: {source: plantvillage, source_class: Tomato___Bacterial_spot}

@@ -1,0 +1,5 @@
+raw/
+dataset/
+reference/
+__pycache__/
+*.pyc
